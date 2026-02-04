@@ -1,0 +1,477 @@
+* {
+    -moz-box-sizing: border-box; 
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+    background-color: var(--fond);
+    margin: 0;
+    padding: 0;
+    font-family: "router", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    min-height: 100%;
+    padding-bottom: 8%;
+}
+
+header {
+    max-width: 100%;
+    
+    background-color: var(--beige);
+    padding: 0.5rem 0 1.2rem;
+    position: sticky;
+    z-index: 100;
+    border-bottom: 6px solid; /* crée la ligne */
+    border-image: linear-gradient(90deg, var(--rose), var(--saumon), var(--magenta)) 1;
+}
+
+
+.nom-prenom {
+    font-family:"shrikhand";
+    font-size:xx-large;
+    color: var(--rose);
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem 0;
+}
+
+.nom-prenom span {
+    position: relative;
+    z-index: 2;
+}
+
+.nom-prenom span::before {
+    content: "Léa Gallou";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* derrière le texte principal */
+    color: var(--magenta);
+    transform: translate(-2.5px, -2px);
+}
+
+.nom-prenom span::after {
+    content: "Léa Gallou";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3; /* devant le texte principal */
+    color: var(--saumon);
+    transform: translate(2.5px, 2px);
+}
+
+.nav-links {
+    list-style: none;
+    margin-top: 0.5rem;
+    margin-bottom: auto;
+    padding: 0 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    gap: 3rem;
+
+    font-weight: 700;
+}
+
+
+.nav-links a {
+    color: var(--rose);
+    font-size:larger;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: var(--magenta);
+}
+
+
+.contenu-bio {
+    background-color: var(--beige);
+    padding: 2rem; 
+    border-radius: 10px;
+    max-width: 90%;
+    margin: 6rem auto;
+    color: var(--magenta);
+    font-size: larger;
+    box-shadow: -6px 6px 0px var(--saumon), -12px 12px 0px var(--magenta);
+}
+
+.titre-bio {
+    position: relative;
+    font-family: "shrikhand";
+    color: var(--magenta);
+    z-index: 1;
+}
+
+.titre-bio::before {
+    content: "Biographie";
+    position: absolute;
+    top: 0;
+    left: 0; 
+    color: var(--saumon);
+    transform: translate(-2.5px, 2.5px);
+    z-index: -1;
+}
+
+.texte-bio {
+    padding: 0 4rem;
+    font-size: 25px;
+    text-align: left;
+}
+
+.footer-bio {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 40px; 
+    background: linear-gradient(90deg, var(--rose), var(--saumon), var(--magenta)); /* dégradé de couleurs */
+}
+
+.copyright {
+    color: var(--fond);
+    text-align: center;
+    position: relative;
+    bottom: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+.titre-3d {
+    display: flex;
+    margin: 4rem 2rem;
+    color: var(--rose);
+    font-size: xx-large;
+    position: relative;
+    z-index: 1;
+}
+
+.titre-3d::before {
+    content: "Mes projets Blender";
+    position: absolute;
+    z-index:-1 ;
+    top: 0;
+    left: 0;
+    color: var(--beige);
+    transform: translate(-2.5px, -2px);
+}
+
+.images {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    margin: 2rem;
+    gap: 30px;
+}
+
+/*PAGE 3D*/
+
+.colonne1, .colonne2  {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; 
+    width: 45%;
+}
+
+.colonne1 img, .colonne2 img {
+    width: 100%; 
+    height: auto; 
+    border-radius: 20px;
+    display: block;
+    object-fit: cover;
+}
+
+.fin {
+    display: flex;
+    justify-content: center; 
+    margin: 2rem 0;
+}
+
+.fin img {
+    max-width: 50%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.bouton {
+    text-align: right;
+    margin-top: 5rem;
+    margin-right: 2rem;
+}
+
+.btn.btn-primary {
+    display: inline; /* Transforme le block en inline */
+    text-decoration: None;
+    color: var(--magenta);
+    border: 2px solid var(--magenta);
+    padding: 8px 13px;
+    border-radius: 20px;
+    transition: transform 0.2s ease;
+}
+
+.btn.btn-primary:hover {
+    transform: translateY(-8px);
+}
+
+.footer-3d {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(90deg, var(--rose), var(--saumon), var(--magenta));
+}
+
+
+
+
+
+
+
+
+
+
+.titre-web {
+    display: flex;
+    margin: 4rem 2rem;
+    color: var(--rose);
+    font-size: xx-large;
+    position: relative;
+    z-index: 1;
+}
+
+.titre-web::before {
+    content: "Mes projets Web";
+    position: absolute;
+    z-index:-1 ;
+    top: 0;
+    left: 0;
+    color: var(--beige);
+    transform: translate(-2.5px, -2px);
+}
+
+.explication-web {
+    text-align: center;
+    padding-bottom: 3rem;
+    color: var(--rose);
+}
+
+.page {
+    text-align: center;
+    width: 100%;           
+    height: 400px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border: 1px solid black;
+    border-radius: 22px;
+    scrollbar-width: none;  /* masque la barre sur Firefox */
+}
+
+.page:hover {
+    cursor: grab;
+}
+
+.prototype {
+    display: inline; /* Transforme le block en inline */
+    text-align: center;
+    margin-right: 2rem;
+    text-decoration: None;
+    color: black;
+    border-radius: 20px;
+    transition: transform 0.2s ease;
+}
+
+
+.imag {
+    width: 100vw;
+    max-width: none;
+    display: flex;
+    flex-direction: column; /* tout s’empile verticalement */
+    align-items: center;
+    gap: 10rem;
+    margin: 2rem 0;
+}
+
+
+/*PAGE WEB*/
+.page {
+    width: 80vw;
+    max-width: 1500px;      
+    height: calc(80vw * 10 / 16); /* calcul pour garder ratio 16/10 */
+    max-height: calc(1500px * 10 / 16);
+    border: 1px solid black;
+    border-radius: 22px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.page img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.page {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.page::-webkit-scrollbar {
+    display: none;
+}
+
+.c1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.prototype {
+    margin-top: 0.5rem;
+    justify-content: center;
+    color: black;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: transform 0.2s ease;
+    
+    font-size: 3vw;
+}
+
+.prototype:hover {
+    transform: translateY(-5px);
+}
+
+.footer-web {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(90deg, var(--rose), var(--saumon), var(--magenta));
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.titre-dessin {
+    display: flex;
+    margin: 4rem 2rem;
+    color: var(--rose);
+    font-size: xx-large;
+    position: relative;
+    z-index: 1;
+}
+
+.titre-dessin::before {
+    content: "Mes projets Dessin";
+    position: absolute;
+    z-index:-1 ;
+    top: 0;
+    left: 0;
+    color: var(--beige);
+    transform: translate(-2.5px, -2px);
+}
+
+.explication-dessin {
+    text-align: center;
+    padding-bottom: 3rem;
+    color: var(--rose);
+}
+
+.images.dessin {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4rem;
+    flex-wrap: wrap; /* éviter que ça déborde sur petits écrans */
+}
+
+.images.dessin .colonne {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-dessin {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(90deg, var(--rose), var(--saumon), var(--magenta));
+}
+
+.pixel-art {
+    image-rendering: pixelated;   /* garde les pixels nets */
+    display: block;
+    width: 300px;
+    max-width: 300px;
+    height: auto;
+    display: block;
+}
+
+
+
+
+.infos {
+    text-align: center;
+    font-size: xx-large;
+    font-family:"router", sans-serif;
+    font-weight: bold;
+    margin-top: 10rem;
+    color: rgb(131, 66, 66);
+}
+
+
+
+
+
+
+
+
+
+
+
+/*RESPONSIVE*/
+
+@media (max-width: 428px) {
+
+    h1 { font-size: 3rem; }
+    h2 { font-size: 2.2rem; }
+    h3 { font-size: 1.3rem; }
+    p  { font-size: 1rem; }
+    header {
+        
+    }
+
+}
